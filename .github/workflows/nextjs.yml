@@ -93,3 +93,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+
+  # cron job
+  # This job runs every day at 00:05 Pacific Time (08:00 UTC)
+  schedule:
+    - cron: "5 8 * * *"
