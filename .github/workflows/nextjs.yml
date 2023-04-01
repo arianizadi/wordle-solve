@@ -8,6 +8,10 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+  
+  # cron job to run every day at 00:05 Pacific Time (08:01 UTC)
+  schedule:
+    - cron: "5 8 * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -93,8 +97,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-
-  # cron job
-  # This job runs every day at 00:05 Pacific Time (08:00 UTC)
-  schedule:
-    - cron: "5 8 * * *"
