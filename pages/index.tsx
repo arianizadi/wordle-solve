@@ -30,7 +30,7 @@ export default function Home({ data }: { data: WordleJSON }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex justify-center items-center h-screen w-screen overflow-hidden">
+      <div className="flex justify-center items-center min-h-screen min-h[-webkit-fill-available] w-screen overflow-hidden">
         <Tile wordle={data} />
       </div>
     </>
