@@ -7,7 +7,7 @@ export async function getStaticProps() {
   const data = await res.json()
 
   if (!res.ok) {
-    throw new Error("Failed to get file: ")
+    throw new Error(`Failed to fetch - ${baseURL + file}.json`)
   }
 
   return { props: { data } }
